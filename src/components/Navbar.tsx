@@ -60,7 +60,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/fitlog-icon.png"
-            alt="FitLog"
+           alt="FitLog logo"
             width={18}
             height={18}
           />
