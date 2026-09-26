@@ -26,7 +26,7 @@ export default function WorkoutCard({
       <div className="relative h-32 overflow-hidden sm:h-36">
         <Image
           src="/workout-card.png"
-          alt={workout.name}
+          alt={`${workout.name} workout`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition duration-300 group-hover:scale-105"
