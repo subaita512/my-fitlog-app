@@ -28,7 +28,7 @@ export default function Home() {
           </div>
 
           <p className="text-[7px] text-gray-600">
-            © 2026 FitLog
+           © 2026 FitLog. All rights reserved.
           </p>
         </div>
       </footer>
