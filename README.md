@@ -111,3 +111,14 @@ public/
 * Cloud database storage
 * Workout progress tracking
 * Personalized workout recommendations
+## Project Highlights
+
+- 12 workout exercises
+- Workout details pages
+- Today's workout plan
+- Saved workouts
+- Workout sorting
+- Mark workouts as completed
+- Toast notifications
+- Responsive design
+- LocalStorage persistence
