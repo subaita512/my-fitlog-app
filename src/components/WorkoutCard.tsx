@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Workout = {
   id: string;
@@ -6,6 +7,7 @@ type Workout = {
   category: string;
   tags: string[];
   description: string;
+  equipment: string;
   duration: string;
   calories: string;
   rating: string;
@@ -17,15 +19,16 @@ export default function WorkoutCard({
   workout: Workout;
 }) {
   return (
-    <a
+    <Link
       href={`/workout/${workout.id}`}
       className="group overflow-hidden rounded-lg border border-[#24272c] bg-[#15181c] transition hover:border-lime-400"
     >
-      <div className="relative h-32 overflow-hidden">
+      <div className="relative h-32 overflow-hidden sm:h-36">
         <Image
           src="/workout-card.png"
           alt={workout.name}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition duration-300 group-hover:scale-105"
         />
 
@@ -42,7 +45,7 @@ export default function WorkoutCard({
       </div>
 
       <div className="p-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2">
           <span className="text-[6px] font-bold uppercase text-lime-400">
             {workout.category}
           </span>
@@ -60,11 +63,12 @@ export default function WorkoutCard({
           {workout.description}
         </p>
 
-        <div className="mt-3 flex gap-3 text-[6px] text-gray-500">
+        <div className="mt-3 flex flex-wrap gap-3 text-[6px] text-gray-500">
           <span>◷ {workout.duration}</span>
           <span>🔥 {workout.calories}</span>
+          <span>★ {workout.rating}</span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
